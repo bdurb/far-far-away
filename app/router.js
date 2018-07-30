@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('people');
+  this.route('home');
+  this.route('planets');
 });
 
 export default Router;
