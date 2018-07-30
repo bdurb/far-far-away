@@ -1,12 +1,12 @@
+
 import Route from '@ember/routing/route';
-import fetch from 'fetch';
+import axios from 'npm:axios'
+
 
 export default Route.extend({
   model() {
-    return fetch('https://swapi.co/api/people')
-    .then((res) => {
-      return res.results
-      console.log(res.results)
+    axios.get('https://swapi.co/api/people').then((res) => {
+      return res.data.results
     })
-  }
+    }
 });

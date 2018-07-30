@@ -1,3 +1,15 @@
 <h1>Here are the Star Wars People</h1>
 
-{{!-- {{outlet}} --}}
+
+  
+    {{#each model as |person|}}
+      <div class="person-card">
+        <h3>{{person.name}}</h3>
+        <p>{{person.height}}</p>
+        <p>{{person.hair_color}}</p>
+        <p>{{person.eye_color}}</p>
+        <p>{{person.gender}}</p>
+      </div>
+    {{/each}}
+  
+  {{outlet}}
